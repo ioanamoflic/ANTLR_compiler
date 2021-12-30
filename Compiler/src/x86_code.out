@@ -1,0 +1,24 @@
+.CODE
+.MODEL       small
+.STACK       1000h
+     PUSH a
+     PUSH 2
+     POP EAX
+     MOV EAX a
+.L_while_loop
+     MOV EAX, a
+     INC [EAX]
+     MOV ECX, EAX
+.L_while
+     MOV EAX, a
+     CMP EAX, 10
+     JMP .L_while_loop
+function func(let) PROC
+     MOV EAX, a
+     DEC [EAX]
+     MOV ECX, EAX
+function func(let) ENDP
+DATA: 
+a DW 2
+END:
+     int 21h

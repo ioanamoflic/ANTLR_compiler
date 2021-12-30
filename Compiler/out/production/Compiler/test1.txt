@@ -1,0 +1,6 @@
+function func(let a, let b)
+{
+ a++;
+}
+
+function func(a, b);

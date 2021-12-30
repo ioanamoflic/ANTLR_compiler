@@ -1,0 +1,14 @@
+.CODE
+.MODEL       small
+.STACK       1000h
+function func(let, let) PROC
+     MOV EAX, a
+     INC [EAX]
+     MOV ECX, EAX
+function func(let, let) ENDP
+     MOV EDI, a
+     MOV ESI, b
+     CALL function func(a, b)
+DATA: 
+END:
+     int 21h
