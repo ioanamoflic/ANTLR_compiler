@@ -7,3 +7,4 @@ The developed compiler contains the following compilation steps:
 - syntax analysis
 - semantic analysis
 - code generation (x86)
+The project also contains an error handling module.
